@@ -1,0 +1,13 @@
+
+mern-app-frontend/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── AuthForm.js           # For registration and login forms
+│   │   └── Dashboard.js           # For the user dashboard
+│   ├── App.js                     # Main application file
+│   ├── index.js                   # Entry point
+│   ├── api.js                     # API calls
+│   └── App.css                    # Styles
+├── package.json
+└── README.md
