@@ -1,0 +1,16 @@
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import AuthForm from './AuthForm';
+
+test('renders AuthForm component', () => {
+  render(<AuthForm />);
+  expect(screen.getByText(/login/i)).toBeInTheDocument();
+});
+
+test('submits login form', async () => {
+  render(<AuthForm />);
+  fireEvent.change(screen.getByPlaceholderText(/username/i), { target: { value: 'testuser' } });
+  fireEvent.change(screen.getByPlaceholderText(/password/i), { target: { value: 'testpass' } });
+  fireEvent.click(screen.getByText(/login/i));
+  // Add assertions based on your API response
+});
